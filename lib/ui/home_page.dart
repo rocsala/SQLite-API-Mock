@@ -75,7 +75,7 @@ class _HomePageState extends State<HomePage> {
                               child:
                                   CircularProgressIndicator(color: Colors.lime),
                             )
-                          : _buildEmployeeListView()),
+                          : _buildCharacterListView()),
                   Container(
                       color: Colors.white,
                       height: 370,
@@ -185,7 +185,7 @@ class _HomePageState extends State<HomePage> {
     print('All employees deleted');
   }
 
-  _buildEmployeeListView() {
+  _buildCharacterListView() {
     return FutureBuilder(
       future: DBProvider.db.getAllCharacters(),
       builder: (BuildContext context, AsyncSnapshot snapshot) {
